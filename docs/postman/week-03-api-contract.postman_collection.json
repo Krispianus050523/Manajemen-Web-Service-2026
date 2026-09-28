@@ -1,0 +1,255 @@
+{
+  "info": {
+    "_postman_id": "6e13bebf-be39-4f4b-8ee5-6151adf3f5ca",
+    "name": "Minggu 3 — API Contract",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58142559",
+    "_collection_link": "https://go.postman.co/collection/58142559-6e13bebf-be39-4f4b-8ee5-6151adf3f5ca?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "List Events",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/events",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "events"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "200 OK",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/events",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "events"
+              ]
+            }
+          },
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"id\": \"EONET_12345\",\r\n      \"title\": \"Kebakaran Hutan\",\r\n      \"category\": \"Kebakaran Hutan\",\r\n      \"country\": \"Indonesia\",\r\n      \"status\": \"Aktif\",\r\n      \"date\": \"2026-09-25T09:30:00Z\",\r\n      \"latitude\": -6.2000,\r\n      \"longitude\": 106.8166,\r\n      \"source\": \"NASA EONET\"\r\n    }\r\n  ]\r\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Event",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Kebakaran Hutan\",\r\n  \"category\": \"Kebakaran Hutan\",\r\n  \"country\": \"Indonesia\",\r\n  \"latitude\": -6.2000,\r\n  \"longitude\": 106.8166\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/events",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "events"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "201 Created",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Kebakaran Hutan\",\r\n  \"category\": \"Kebakaran Hutan\",\r\n  \"country\": \"Indonesia\",\r\n  \"latitude\": -6.2000,\r\n  \"longitude\": 106.8166\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/events",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "events"
+              ]
+            }
+          },
+          "code": 201,
+          "_postman_previewlanguage": "text",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n  \"data\": {\r\n    \"id\": \"EONET_12346\",\r\n    \"title\": \"Kebakaran Hutan\",\r\n    \"category\": \"Kebakaran Hutan\",\r\n    \"country\": \"Indonesia\",\r\n    \"status\": \"Aktif\",\r\n    \"date\": \"2026-09-28T09:30:00Z\",\r\n    \"latitude\": -6.2000,\r\n    \"longitude\": 106.8166,\r\n    \"source\": \"NASA EONET\"\r\n  }\r\n}"
+        },
+        {
+          "name": "404 Not Found",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Kebakaran Hutan\",\r\n  \"category\": \"Kebakaran Hutan\",\r\n  \"country\": \"Indonesia\",\r\n  \"latitude\": -6.2000,\r\n  \"longitude\": 106.8166\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/events",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "events"
+              ]
+            }
+          },
+          "code": 404,
+          "_postman_previewlanguage": "text",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n  \"message\": \"Event tidak ditemukan\",\r\n  \"errors\": null\r\n}"
+        },
+        {
+          "name": "422 Validation Error",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Kebakaran Hutan\",\r\n  \"category\": \"Kebakaran Hutan\",\r\n  \"country\": \"Indonesia\",\r\n  \"latitude\": -6.2000,\r\n  \"longitude\": 106.8166\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/events",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "events"
+              ]
+            }
+          },
+          "code": 422,
+          "_postman_previewlanguage": "text",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n  \"message\": \"Parameter tidak valid.\",\r\n  \"errors\": {\r\n    \"category\": [\r\n      \"Kategori tidak tersedia.\"\r\n    ]\r\n  }\r\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
