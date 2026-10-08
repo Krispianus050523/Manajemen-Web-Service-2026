@@ -25,7 +25,7 @@ Hasil:
 
 ### 200 Detail — Berhasil
 
-![Screenshot Success Get Event](gambar/Screenshot%202026-10-01%20101709.png)
+![Screenshot Success Get Event](gambar/Screenshot%202026-10-08%20202320.png)
 
 Request Postman:
 
@@ -40,7 +40,7 @@ Hasil:
 ### 404 Not Found
 
 
-![Screenshot Not Found](gambar/Screenshot%202026-10-08%20153342.png)
+![Screenshot Not Found](gambar/Screenshot%202026-10-08%20202219.png)
 
 Request Postman:
 
