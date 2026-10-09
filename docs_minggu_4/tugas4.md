@@ -1,4 +1,4 @@
-# Praktikum Minggu 4 — Laravel API Foundations
+# Tugas Minggu 4 — Laravel API Foundations
 
 ## 1. Tujuan
 
