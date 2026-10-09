@@ -1,4 +1,4 @@
-# Praktikum Minggu 4 — Read-only Laravel API
+# Praktikum Minggu 4 — Laravel API
 
 ## Resource
 
