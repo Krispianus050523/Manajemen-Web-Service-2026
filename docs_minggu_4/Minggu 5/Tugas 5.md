@@ -332,3 +332,7 @@ Dalam penyelesaian tugas dan perbaikan kode pada Minggu 5 ini:
   3. Membantu penyusunan berkas koleksi Postman `docs/postman_collection.json`.
   4. Membantu menyusun dokumentasi laporan praktikum `docs/minggu-5.md` sesuai dengan format yang telah ditentukan.
 - **Pernyataan:** Seluruh kode yang dihasilkan dan disesuaikan telah diperiksa, diuji, dan dipahami fungsinya secara menyeluruh oleh pengembang.
+### Dokumentasi
+![Screenshot Success Get Event](Gambar/Tugas%205.1.png)
+![Screenshot Success Create Event](Gambar/tugas%205.2.png)
+![Screenshot Success Update Event](Gambar/Tugas%205.3.png)
