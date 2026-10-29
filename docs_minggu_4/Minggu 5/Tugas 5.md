@@ -182,42 +182,7 @@ Pengujian dilakukan menggunakan Postman dan cURL terhadap server Laravel lokal (
 }
 ```
 
-### B. Pengujian POST Store (`/api/events`)
-- **Method:** `POST`
-- **URL:** `http://127.0.0.1:8000/api/events`
-- **Request Body:**
-```json
-{
-  "external_id": "EVT-TEST-004",
-  "title": "Banjir Bandang",
-  "category": "Floods",
-  "country": "Indonesia",
-  "status": "Aktif",
-  "event_date": "2026-10-15 10:00:00",
-  "latitude": -6.2088,
-  "longitude": 106.8456,
-  "source": "BMKG"
-}
-```
-- **Status Code:** `201 Created`
-- **Respon:**
-```json
-{
-  "data": {
-    "id": "EVT-TEST-004",
-    "title": "Banjir Bandang",
-    "category": "Floods",
-    "country": "Indonesia",
-    "status": "Aktif",
-    "date": "2026-10-15T10:00:00.000000Z",
-    "latitude": -6.2088,
-    "longitude": 106.8456,
-    "source": "BMKG"
-  }
-}
-```
-
-### C. Pengujian PUT Update (`/api/events/{event}`)
+### B. Pengujian PUT Update (`/api/events/{event}`)
 - **Method:** `PUT`
 - **URL:** `http://127.0.0.1:8000/api/events/event-123`
 - **Request Body:**
@@ -244,14 +209,6 @@ Pengujian dilakukan menggunakan Postman dan cURL terhadap server Laravel lokal (
 }
 ```
 *Catatan: Nilai `title` berhasil terupdate menjadi `"My Event Update"` baik dikirim via `raw JSON` maupun `form-data`.*
-
-### D. Pengujian DELETE Destroy (`/api/events/{event}`)
-- **Method:** `DELETE`
-- **URL:** `http://127.0.0.1:8000/api/events/EVT-TEST-004`
-- **Status Code:** `204 No Content`
-- **Respon Body:** *(Kosong sesuai standar RESTful)*
-
----
 
 ## 5. Error Case
 
